@@ -1,0 +1,23 @@
+universe = vanilla
+
+executable = run.sh
+
+
+request_cpus   = 1
+request_memory = 8GB
+request_disk   = 2GB
+
+output = condor.out
+error  = condor.err
+log    = condor.log
+
+should_transfer_files   = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = run.sh,random_things.py,Golden_data.json
+
+
+manifest = true
+
+queue 1
+
+
